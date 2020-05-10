@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'BLa bla',
+          'Flutter Practice',
           style: TextStyle(color: Colors.black87),
         ),
         centerTitle: true,
