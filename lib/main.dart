@@ -16,10 +16,12 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.tealAccent,
       ),
       body: Center(
-        child: Icon(
-          Icons.airplay,
+        child: RaisedButton(
+          onPressed: () {
+            print('Clicked');
+          },
+          child: Text("Click"),
           color: Colors.teal,
-          size: 500/3,
         ),
       ),
       floatingActionButton: FloatingActionButton(
