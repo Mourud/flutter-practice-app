@@ -16,7 +16,11 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.tealAccent,
       ),
       body: Center(
-        child: Image.asset('assets/cave.png'),
+        child: Icon(
+          Icons.airplay,
+          color: Colors.teal,
+          size: 500/3,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
