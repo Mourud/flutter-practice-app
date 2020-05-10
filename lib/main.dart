@@ -16,11 +16,14 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.tealAccent,
       ),
       body: Center(
-        child: RaisedButton(
+        child: RaisedButton.icon(
           onPressed: () {
             print('Clicked');
           },
-          child: Text("Click"),
+          icon: Icon(
+            Icons.airplay,
+          ),
+          label: Text("Click"),
           color: Colors.teal,
         ),
       ),
