@@ -1,33 +1,31 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-  home: Home()
-));
+void main() => runApp(MaterialApp(home: Home()));
 
-
-class Home extends StatelessWidget{
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('BLa bla'),
+        title: Text(
+          'BLa bla',
+          style: TextStyle(color: Colors.black87),
+        ),
         centerTitle: true,
         backgroundColor: Colors.tealAccent,
       ),
       body: Center(
-        child: Image(
-            image: AssetImage(
-              ''
-            )
-        ),
+        child: Image.asset('assets/cave.png'),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text('nipple'),
+        child: Text(
+          'click',
+          style: TextStyle(color: Colors.black87),
+        ),
         backgroundColor: Colors.tealAccent,
       ),
     );
   }
-
 }
