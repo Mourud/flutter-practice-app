@@ -21,40 +21,37 @@ class Home extends StatelessWidget {
         children: <Widget>[
           Container(
               padding: EdgeInsets.all(40),
-              color: Colors.blue,
+              color: Colors.teal[200],
               child: Text('blue')),
           Container(
               padding: EdgeInsets.all(40),
-              color: Colors.lightBlue,
+              color: Colors.teal[400],
               child: Text('light blue')),
-          Container(
-              padding: EdgeInsets.all(40),
-              color: Colors.lightBlueAccent,
-              child: Text('light blue accent')),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
             Container(
                 padding: EdgeInsets.all(37.1),
-                color: Colors.cyan[100],
+                color: Colors.tealAccent[100],
                 child: Text('1')),
             Container(
                 padding: EdgeInsets.all(37.1),
-                color: Colors.cyanAccent,
+                color: Colors.tealAccent,
                 child: Text('2')),
             Container(
                 padding: EdgeInsets.all(37.1),
-                color: Colors.cyanAccent[400],
+                color: Colors.tealAccent[400],
                 child: Text('3')),
             Container(
                 padding: EdgeInsets.all(37.1),
-                color: Colors.cyanAccent[700],
+                color: Colors.tealAccent[700],
                 child: Text('4')),
             Container(
                 padding: EdgeInsets.all(37.1),
-                color: Colors.cyan,
+                color: Colors.teal,
                 child: Text('5')),
           ]),
+          Expanded(child: Image.asset('assets/cave.png'))
         ],
       ),
       floatingActionButton: FloatingActionButton(
