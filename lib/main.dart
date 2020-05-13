@@ -20,31 +20,50 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Container(
-            padding: EdgeInsets.all(20),
-            color: Colors.blue,
-            child: Text('blue')
-          ),
+              padding: EdgeInsets.all(40),
+              color: Colors.blue,
+              child: Text('blue')),
           Container(
-              padding: EdgeInsets.all(30),
+              padding: EdgeInsets.all(40),
               color: Colors.lightBlue,
-              child: Text('light blue')
-          ),
+              child: Text('light blue')),
           Container(
               padding: EdgeInsets.all(40),
               color: Colors.lightBlueAccent,
-              child: Text('light blue accent')
-          ),
+              child: Text('light blue accent')),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+            Container(
+                padding: EdgeInsets.all(37.1),
+                color: Colors.cyan[100],
+                child: Text('1')),
+            Container(
+                padding: EdgeInsets.all(37.1),
+                color: Colors.cyanAccent,
+                child: Text('2')),
+            Container(
+                padding: EdgeInsets.all(37.1),
+                color: Colors.cyanAccent[400],
+                child: Text('3')),
+            Container(
+                padding: EdgeInsets.all(37.1),
+                color: Colors.cyanAccent[700],
+                child: Text('4')),
+            Container(
+                padding: EdgeInsets.all(37.1),
+                color: Colors.cyan,
+                child: Text('5')),
+          ]),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text(
           'click',
-          style: TextStyle(
-              fontSize: 20,
-              color: Colors.black87),
+          style: TextStyle(color: Colors.black87),
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.tealAccent,
       ),
     );
   }
