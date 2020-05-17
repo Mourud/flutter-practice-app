@@ -1,69 +1,91 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(home: Home()));
+void main() => runApp(MaterialApp(home: AppMain()));
 
-class Home extends StatelessWidget {
+class AppMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text(
-          'Flutter Practice',
-          style: TextStyle(color: Colors.black87),
-        ),
+        title: Text("Profile"),
         centerTitle: true,
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: Colors.grey[850],
+        elevation: 0,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          Container(
-              padding: EdgeInsets.all(40),
-              color: Colors.blue,
-              child: Text('blue')),
-          Container(
-              padding: EdgeInsets.all(40),
-              color: Colors.lightBlue,
-              child: Text('light blue')),
-          Container(
-              padding: EdgeInsets.all(40),
-              color: Colors.lightBlueAccent,
-              child: Text('light blue accent')),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Padding(
+        padding: EdgeInsets.all(30),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/monocle.jpeg'),
+                radius: 100,
+              ),
+            ),
+            Divider(
+              height: 60,
+              color: Colors.grey[800],
+            ),
+            Text(
+              "NAME",
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 1.0,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Mourud Ishmam Ahmed",
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "FLUTTER PROGRAMMING LEVEL",
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 1.0,
+              ),
+            ),
+            Text(
+              "10",
+              style: TextStyle(
+                color: Colors.amber,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-            Container(
-                padding: EdgeInsets.all(37.1),
-                color: Colors.cyan[100],
-                child: Text('1')),
-            Container(
-                padding: EdgeInsets.all(37.1),
-                color: Colors.cyanAccent,
-                child: Text('2')),
-            Container(
-                padding: EdgeInsets.all(37.1),
-                color: Colors.cyanAccent[400],
-                child: Text('3')),
-            Container(
-                padding: EdgeInsets.all(37.1),
-                color: Colors.cyanAccent[700],
-                child: Text('4')),
-            Container(
-                padding: EdgeInsets.all(37.1),
-                color: Colors.cyan,
-                child: Text('5')),
-          ]),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text(
-          'click',
-          style: TextStyle(color: Colors.black87),
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[500],
+                ),
+                SizedBox(width: 10,),
+                Text(
+                  'mourud.ishmam@gmail.com',
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16,
+                  ),
+                )
+              ],
+            )
+          ],
         ),
-        backgroundColor: Colors.tealAccent,
       ),
     );
   }
