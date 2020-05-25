@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(home: AppMain()));
 
-class AppMain extends StatelessWidget {
+class AppMain extends StatefulWidget {
+  @override
+  _AppMainState createState() => _AppMainState();
+}
+
+class _AppMainState extends State<AppMain> {
+
+  int programmerLevel = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,6 +18,16 @@ class AppMain extends StatelessWidget {
       appBar: AppBar(
         title: Text("Profile"),
         centerTitle: true,
+        backgroundColor: Colors.grey[850],
+        elevation: 0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            programmerLevel++;
+          });
+        },
+        child: Icon(Icons.add),
         backgroundColor: Colors.grey[850],
         elevation: 0,
       ),
@@ -57,7 +75,7 @@ class AppMain extends StatelessWidget {
               ),
             ),
             Text(
-              "10",
+              "$programmerLevel",
               style: TextStyle(
                 color: Colors.amber,
                 fontSize: 28,
@@ -74,12 +92,14 @@ class AppMain extends StatelessWidget {
                   Icons.email,
                   color: Colors.grey[500],
                 ),
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 Text(
                   'mourud.ishmam@gmail.com',
                   style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 16,
+                    color: Colors.grey,
+                    fontSize: 16,
                   ),
                 )
               ],
@@ -90,3 +110,4 @@ class AppMain extends StatelessWidget {
     );
   }
 }
+
